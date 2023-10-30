@@ -1,4 +1,5 @@
-import Image from 'next/image'
+'use client';
+import 'flowbite';
 
 export default function Home() {
   return (
@@ -515,7 +516,7 @@ export default function Home() {
                     ></path>
                   </svg>
                   <div className="text-sm text-gray-900 dark:text-white">
-                    Products
+                    Product
                   </div>
                 </a>
                 <a
