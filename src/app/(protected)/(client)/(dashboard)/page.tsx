@@ -1,10 +1,9 @@
 'use client'
-import 'flowbite'; // NOTE: Flowbite needs to be imported at least in one 'use client' component
 
+import 'flowbite'; // NOTE: Flowbite needs to be imported at least in one 'use client' component
 import Nav from './nav';
 
-export default function Home() {
-
+export default function Dashboard() {
   return (
     <div className="antialiased bg-gray-50 dark:bg-gray-900">
 
@@ -641,3 +640,5 @@ export default function Home() {
     </div>
   )
 }
+
+

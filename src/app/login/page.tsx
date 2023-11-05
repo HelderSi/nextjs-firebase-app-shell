@@ -1,9 +1,8 @@
 'use client';
 
-import { useSession, signIn } from "next-auth/react"
+import { signIn } from "next-auth/react"
 
 export default function Login() {
-    const { data: session, status } = useSession()
 
     const handleSignIn = (provider: 'google' | 'github' | 'apple') => () => {
         signIn(provider, {
