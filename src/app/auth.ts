@@ -12,7 +12,7 @@ export const {
         })
     ],
     pages: {
-        signIn: '/login'
+        signIn: process.env.SIGN_PAGE_URL || '/login'
     },
     callbacks: {
         async jwt({ token, account }) {

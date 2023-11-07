@@ -1,14 +1,19 @@
 'use client'
 
 import { useSession } from "next-auth/react"
+import { redirect, usePathname } from "next/navigation"
 
 export default function ProtectedLayot({
     children,
 }: {
     children: React.ReactNode
 }) {
+    const pathname = usePathname()
     const { data: session, status: authStatus } = useSession({
-        required: true
+        required: true,
+        onUnauthenticated() {
+            redirect(`${process.env.SIGN_PAGE_URL || '/login'}?callbackUrl=${pathname}`)
+        },
     })
 
     if (authStatus === 'loading') return <div className="h-screen flex justify-center items-center">
