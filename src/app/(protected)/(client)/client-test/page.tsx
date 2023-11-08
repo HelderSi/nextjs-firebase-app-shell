@@ -1,5 +1,5 @@
 'use client'
 
 export default function Page() {
-    return <>Teste</>
+    return <>Protected Client Component Test</>
 }
