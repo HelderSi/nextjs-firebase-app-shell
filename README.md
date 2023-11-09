@@ -8,6 +8,8 @@ An App starter project that has NextJS with Firebase set up beforehand. Go ahead
 - Firebase
 - Flowbite
 - Next Auth
+- Firebae Admin
+- Next Auth FirestorAdapter
 
 ### References
 

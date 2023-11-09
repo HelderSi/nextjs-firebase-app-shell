@@ -1,4 +1,6 @@
 import NextAuth from 'next-auth';
+import { FirestoreAdapter } from "@auth/firebase-adapter"
+import { cert } from "firebase-admin/app"
 import GitHub from 'next-auth/providers/github';
 
 export const {
@@ -27,5 +29,13 @@ export const {
             console.log('token', token);
             return session
         }
-    }
+    },
+    adapter: FirestoreAdapter({
+        credential: cert({
+            projectId: process.env.FIREBASE_PROJECT_ID,
+            clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
+            privateKey: process.env.FIREBASE_PRIVATE_KEY,
+        }),
+        namingStrategy: 'snake_case',
+    })
 });

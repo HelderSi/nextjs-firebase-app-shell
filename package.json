@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@auth/firebase-adapter": "^1.0.3",
+    "firebase-admin": "^11.11.0",
     "flowbite": "^2.0.0",
     "flowbite-react": "^0.6.4",
     "next": "14.0.1",
